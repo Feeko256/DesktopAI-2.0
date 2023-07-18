@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <ApplicationIcon>free-icon-ai-5278402.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="free-icon-ai-5278402.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MaterialDesignThemes" Version="4.10.0-ci281" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Views\MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="logo.png" />
+      <Resource Include="GPTlogo.png" />
+      <None Remove="UserLogo.png" />
+      <Resource Include="UserLogo.png" />
+    </ItemGroup>
+
+</Project>
